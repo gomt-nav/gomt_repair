@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路徑詳細資料</title>
+    <link rel="stylesheet" href="./css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
+    <script type="module" src="./javascrips/mapdetails.js"></script> <!-- 將路徑詳細資料 JS 檔案分離 -->
+
+</head>
+<body>
+    <div id="map" style="height: 400px;"></div>
+    <div class="route-details">
+        <h1 id="routeName">路徑名稱</h1>
+        <p>時長：<span id="duration"></span></p>
+        <p>總長度：<span id="distance"></span></p>
+        <p>總爬升：<span id="elevationGain"></span></p>
+        <p>總下降：<span id="elevationLoss"></span></p>
+        <button id="loadToMap" class="btn btn-primary">加載到地圖</button>
+    </div>
+</body>
+</html>

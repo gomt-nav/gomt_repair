@@ -1,0 +1,51 @@
+/* 導覽頁面預設隱藏 */
+.nav-panel {
+    display: none;
+    height: 100vh;
+    background-color: #00FF00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1000;
+    padding-top: 56px; /* 與 navbar 的高度對齊 */
+}
+
+/* 顯示導覽頁 */
+.show-nav {
+    display: block;
+}
+
+/* 保證頁面不會被遮擋 */
+.container {
+    margin-top: 100px;
+}
+
+
+/* 頁面主要樣式 */
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.weather-api-content {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* API 區域內容樣式 */
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 保證頁面不會被遮擋 */
+.container {
+    margin-top: 100px;
+}

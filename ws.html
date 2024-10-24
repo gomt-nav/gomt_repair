@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水源資訊</title>
+    <link rel="manifest" href="/manifest.json">
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自訂CSS -->
+    <link rel="stylesheet" href="./css/ws.css">
+</head>
+<body>
+    <!-- 漢堡選單 -->
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" onclick="toggleNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 導覽頁（漢堡選單展開時顯示的綠色區域，增加超連結） -->
+    <div id="navPanel" class="nav-panel">
+        <ul class="list-unstyled p-4">
+            <li class="mb-3">
+                <a href="map.html" class="text-dark">地圖</a>
+            </li>
+            <li class="mb-3">
+                <a href="weather.html" class="text-dark">天氣</a>
+            </li>
+            <li class="mb-3">
+                <a href="ws.html" class="text-dark">水源</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 頁面內容 -->
+    <div class="container text-center mt-5 pt-5">
+        <!-- 標題 -->
+        <h1 class="mt-3 mb-3 text-info">水源</h1>
+
+        <!-- API 預留框，動態生成水源資訊 -->
+        <div id="waterSources" class="d-flex flex-column gap-3">
+            <!-- API 資料會放在這裡，每個水源一個方框 -->
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap JS 和 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- 漢堡選單顯示/隱藏功能 -->
+    <script>
+        function toggleNav() {
+            var navPanel = document.getElementById('navPanel');
+            navPanel.classList.toggle('show-nav');
+        }
+
+        // 模擬 API 資料，實際上會來自後端
+        const waterData = [
+            { name: '水源1', lat: 23.471, lon: 120.956 },
+            { name: '水源2', lat: 23.472, lon: 120.957 },
+            { name: '水源3', lat: 23.473, lon: 120.958 }
+        ];
+
+        // 將資料渲染到頁面
+        function renderWaterSources(data) {
+            const container = document.getElementById('waterSources');
+            container.innerHTML = '';  // 清空之前的內容
+            data.forEach(source => {
+                const waterCard = document.createElement('div');
+                waterCard.classList.add('border', 'p-3', 'rounded-3');
+                waterCard.innerHTML = `
+                    <strong>${source.name}</strong><br>
+                    (${source.lat}°N, ${source.lon}°E)
+                `;
+                container.appendChild(waterCard);
+            });
+        }
+
+        // 初始化頁面時加載水源資料
+        window.onload = function() {
+            renderWaterSources(waterData);
+        };
+    </script>
+    <script src="./javascrips/sw-register.js"></script>
+
+</body>
+</html>

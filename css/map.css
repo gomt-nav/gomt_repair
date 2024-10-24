@@ -1,0 +1,59 @@
+/* 導覽頁面預設隱藏 */
+.nav-panel {
+    display: none;
+    height: 100vh;
+    background-color: #00FF00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1000;
+    padding-top: 56px; /* 與 navbar 的高度對齊 */
+}
+
+/* 顯示導覽頁 */
+.show-nav {
+    display: block;
+}
+
+/* 保證頁面不會被遮擋 */
+.container {
+    margin-top: 100px;
+}
+
+/* 日期選擇條樣式 */
+.date-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* API 資料顯示區 */
+.api-content {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 頁面背景與標題 */
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* 按鈕樣式 */
+button {
+    width: 250px;
+    font-size: 1.2rem;
+}
+
+#map {
+    height: 400px; /* 或你所需的高度 */
+    width: 100%;
+}

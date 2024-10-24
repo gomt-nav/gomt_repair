@@ -1,0 +1,78 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+body {
+    background: linear-gradient(to right, #f0f0f0, #a8e063);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+/* Text styling */
+.text-container h1 {
+    font-size: 48px;
+    color: black;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+/* Button styling */
+.button-container {
+    margin-top: 20px;
+}
+
+.start-button {
+    padding: 15px 30px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+/* 導覽頁面預設隱藏 */
+.nav-panel {
+    display: none;
+    height: 100vh;
+    background-color: #00FF00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1000;
+    padding-top: 56px; /* 與 navbar 的高度對齊 */
+}
+
+/* 顯示導覽頁 */
+.show-nav {
+    display: block;
+}
+
+/* 保證頁面不會被遮擋 */
+.container {
+    margin-top: 100px;
+}

@@ -1,0 +1,58 @@
+2024-10-17 11:53:03,822 - ERROR - Failed to retrieve data from ['https://www.hiking.biji.co/', 'https://hikingbook.net/', 'https://www.backpackers.com.tw/forum/forumdisplay.php?f=31', 'https://www.100mountain.com/', 'https://taiwanhiking.com/']: No connection adapters were found for "['https://www.hiking.biji.co/', 'https://hikingbook.net/', 'https://www.backpackers.com.tw/forum/forumdisplay.php?f=31', 'https://www.100mountain.com/', 'https://taiwanhiking.com/']"
+2024-10-17 11:53:03,823 - WARNING - No .gpx files to download.
+2024-10-22 09:32:37,268 - ERROR - Failed to retrieve data from https://example.com/taiwan-hiking-trails: 404 Client Error: Not Found for url: https://example.com/taiwan-hiking-trails
+2024-10-22 09:32:37,268 - WARNING - No .gpx files to download.
+2024-10-22 09:41:04,357 - ERROR - Failed to retrieve data from https://www.hiking.biji.co/: HTTPSConnectionPool(host='www.hiking.biji.co', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.hiking.biji.co'. (_ssl.c:1000)")))
+2024-10-22 09:41:04,358 - WARNING - No .gpx files to download from https://www.hiking.biji.co/.
+2024-10-22 09:41:05,222 - WARNING - No .gpx files found on https://hikingbook.net/
+2024-10-22 09:41:05,223 - WARNING - No .gpx files to download from https://hikingbook.net/.
+2024-10-22 09:41:05,320 - WARNING - No .gpx files found on https://www.backpackers.com.tw/forum/forumdisplay.php?f=31
+2024-10-22 09:41:05,320 - WARNING - No .gpx files to download from https://www.backpackers.com.tw/forum/forumdisplay.php?f=31.
+2024-10-22 09:41:05,747 - ERROR - Failed to retrieve data from https://www.100mountain.com/: HTTPSConnectionPool(host='www.100mountain.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.100mountain.com'. (_ssl.c:1000)")))
+2024-10-22 09:41:05,747 - WARNING - No .gpx files to download from https://www.100mountain.com/.
+2024-10-22 09:41:07,367 - WARNING - No .gpx files found on https://taiwanhiking.com/
+2024-10-22 09:41:07,367 - WARNING - No .gpx files to download from https://taiwanhiking.com/.
+2024-10-22 09:42:10,601 - WARNING - No .gpx files found on https://www.hiking.biji.co/
+2024-10-22 09:42:10,602 - WARNING - No .gpx files to download from https://www.hiking.biji.co/.
+2024-10-22 09:42:10,927 - WARNING - No .gpx files found on https://hikingbook.net/
+2024-10-22 09:42:10,927 - WARNING - No .gpx files to download from https://hikingbook.net/.
+2024-10-22 09:42:11,018 - WARNING - No .gpx files found on https://www.backpackers.com.tw/forum/forumdisplay.php?f=31
+2024-10-22 09:42:11,019 - WARNING - No .gpx files to download from https://www.backpackers.com.tw/forum/forumdisplay.php?f=31.
+2024-10-22 09:42:11,068 - WARNING - No .gpx files found on https://www.100mountain.com/
+2024-10-22 09:42:11,069 - WARNING - No .gpx files to download from https://www.100mountain.com/.
+2024-10-22 09:42:11,442 - WARNING - No .gpx files found on https://taiwanhiking.com/
+2024-10-22 09:42:11,443 - WARNING - No .gpx files to download from https://taiwanhiking.com/.
+2024-10-22 09:44:15,012 - WARNING - No .gpx files found on https://www.hiking.biji.co/
+2024-10-22 09:44:15,013 - WARNING - No .gpx files to download from https://www.hiking.biji.co/.
+2024-10-22 09:44:15,252 - WARNING - No .gpx files found on https://hikingbook.net/
+2024-10-22 09:44:15,253 - WARNING - No .gpx files to download from https://hikingbook.net/.
+2024-10-22 09:44:15,336 - WARNING - No .gpx files found on https://www.backpackers.com.tw/forum/forumdisplay.php?f=31
+2024-10-22 09:44:15,337 - WARNING - No .gpx files to download from https://www.backpackers.com.tw/forum/forumdisplay.php?f=31.
+2024-10-22 09:44:15,403 - WARNING - No .gpx files found on https://www.100mountain.com/
+2024-10-22 09:44:15,404 - WARNING - No .gpx files to download from https://www.100mountain.com/.
+2024-10-22 09:44:15,768 - WARNING - No .gpx files found on https://taiwanhiking.com/
+2024-10-22 09:44:15,769 - WARNING - No .gpx files to download from https://taiwanhiking.com/.
+2024-10-22 09:44:16,016 - WARNING - No .gpx files found on https://hiking.biji.co/index.php?q=trail&act=gpx_list
+2024-10-22 09:44:16,017 - WARNING - No .gpx files to download from https://hiking.biji.co/index.php?q=trail&act=gpx_list.
+2024-10-22 09:59:00,522 - ERROR - Failed to get CSRF token: 404 Client Error: Not Found for url: https://hiking.biji.co/index.php?q=static&act=404
+2024-10-22 09:59:00,522 - ERROR - Failed to get CSRF token, cannot log in.
+2024-10-22 10:00:41,276 - ERROR - Login failed: 404 Client Error: Not Found for url: https://hiking.biji.co/index.php?q=static&act=404
+2024-10-22 10:00:41,276 - ERROR - Login failed, cannot proceed.
+2024-10-22 10:06:09,797 - INFO - OAuth2 login successful.
+2024-10-22 10:06:10,103 - WARNING - No .gpx files found on https://hiking.biji.co/index.php?q=trail&act=gpx_list
+2024-10-22 10:06:10,103 - WARNING - No .gpx files to download from https://hiking.biji.co/index.php?q=trail&act=gpx_list.
+2024-10-22 10:06:55,599 - INFO - OAuth2 login successful.
+2024-10-22 10:06:55,821 - INFO - Found 2 .gpx files on https://hiking.biji.co/index.php?q=trail&act=gpx_list
+2024-10-22 10:06:57,395 - ERROR - Failed to download /index.php?q=trail&act=upload_gpx: Invalid URL '/index.php?q=trail&act=upload_gpx': No scheme supplied. Perhaps you meant https:///index.php?q=trail&act=upload_gpx?
+2024-10-22 10:06:59,771 - ERROR - Failed to download /index.php?q=trail&act=upload_gpx: Invalid URL '/index.php?q=trail&act=upload_gpx': No scheme supplied. Perhaps you meant https:///index.php?q=trail&act=upload_gpx?
+2024-10-22 10:08:29,000 - INFO - OAuth2 login successful.
+2024-10-22 10:08:29,227 - WARNING - No .gpx files found on https://hiking.biji.co/index.php?q=trail&act=gpx_list
+2024-10-22 10:08:29,228 - WARNING - No .gpx files to download from https://hiking.biji.co/index.php?q=trail&act=gpx_list.
+2024-10-22 10:11:01,696 - WARNING - No .gpx files found on https://twmap.happyman.idv.tw/map/
+2024-10-22 10:11:01,697 - WARNING - No .gpx files to download from https://twmap.happyman.idv.tw/map/.
+2024-10-22 10:11:24,062 - WARNING - No .gpx files found on https://twmap.happyman.idv.tw/map/
+2024-10-22 10:11:24,063 - WARNING - No .gpx files to download from https://twmap.happyman.idv.tw/map/.
+2024-10-22 10:12:53,150 - WARNING - No .gpx files found on https://colorfulbutterfly.net/2020/11/18/gpx-%E8%B3%87%E6%96%99%E5%BA%AB%F0%9F%A6%8B%E8%8A%B1%E8%9D%B4%E8%9D%B6%F0%9F%A6%8B/
+2024-10-22 10:12:53,151 - WARNING - No .gpx files to download from https://colorfulbutterfly.net/2020/11/18/gpx-%E8%B3%87%E6%96%99%E5%BA%AB%F0%9F%A6%8B%E8%8A%B1%E8%9D%B4%E8%9D%B6%F0%9F%A6%8B/.
+2024-10-22 10:13:35,705 - WARNING - No .gpx files found on https://colorfulbutterfly.net/2020/11/18/gpx-%E8%B3%87%E6%96%99%E5%BA%AB%F0%9F%A6%8B%E8%8A%B1%E8%9D%B4%E8%9D%B6%F0%9F%A6%8B/
+2024-10-22 10:13:35,706 - WARNING - No .gpx files to download from https://colorfulbutterfly.net/2020/11/18/gpx-%E8%B3%87%E6%96%99%E5%BA%AB%F0%9F%A6%8B%E8%8A%B1%E8%9D%B4%E8%9D%B6%F0%9F%A6%8B/.
