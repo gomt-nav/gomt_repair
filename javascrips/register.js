@@ -19,21 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const userData = {
             userId: new Date().getTime(),  // 使用唯一值作為 userId
             username: username,
-            email: email,
+            mail: email,
             password: password
         };
 
         // 開啟 IndexedDB 資料庫
         const dbRequest = indexedDB.open('gomtDB', 8);
-
-        dbRequest.onupgradeneeded = function (event) {
-            const db = event.target.result;
-
-            // 建立 `users` ObjectStore，如果不存在
-            if (!db.objectStoreNames.contains('users')) {
-                db.createObjectStore('users', { keyPath: 'userId', autoIncrement: false });
-            }
-        };
 
         dbRequest.onsuccess = function (event) {
             const db = event.target.result;

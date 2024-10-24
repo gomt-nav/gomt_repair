@@ -1,39 +1,64 @@
-import { sendEmail } from './sendEmail.js';  // 引入 sendEmail 功能
+
+import { sendEmailForgot } from './sendEmail.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 獲取表單和輸入框的 DOM 元素
     const forgotPasswordForm = document.getElementById("forgotPasswordForm");
-    const emailInput = document.getElementById("email");
 
-    // 為表單提交事件添加監聽
     forgotPasswordForm.addEventListener("submit", function (event) {
-        event.preventDefault();  // 防止表單的默認提交行為
+        event.preventDefault();
 
-        const email = emailInput.value.trim();  // 獲取輸入的電子郵件
+        const email = document.getElementById("email").value.trim();
+        console.log("輸入的電子郵件:", email);  // 調試電子郵件的值
 
+        // 檢查 email 是否為空或不合法
         if (!email) {
-            alert("請輸入您的電子郵件地址！");
+            console.log("電子郵件輸入為空或不合法");
+            document.getElementById('message').innerText = "請輸入有效的電子郵件地址";
             return;
         }
 
-        // 構建重置密碼的郵件內容
-        const subject = "重置密碼";
-        const message = `
-            親愛的用戶，\n
-            您已請求重置密碼，請點擊以下鏈接來完成密碼重置：\n
-            https://yourwebsite.com/reset-password?email=${encodeURIComponent(email)} \n
-            如果您並未請求重置密碼，請忽略此郵件。\n
-            感謝您！
-        `;
+        // 打開 IndexedDB 並查找該電子郵件是否存在
+        const dbRequest = indexedDB.open('gomtDB', 8);
 
-        // 使用 sendEmail 功能發送重置密碼郵件
-        sendEmail(email, "", subject, message);
+        dbRequest.onsuccess = function (event) {
+            const db = event.target.result;
+            const transaction = db.transaction(['users'], 'readonly');
+            const userStore = transaction.objectStore('users');
 
-        // 顯示成功提示，並清除輸入框
-        const messageDiv = document.getElementById("message");
-        messageDiv.innerHTML = `<div class="alert alert-success" role="alert">
-            重置密碼的鏈接已發送至您的電子郵件，請檢查您的收件箱！
-        </div>`;
-        emailInput.value = "";  // 清除輸入框
+            // 嘗試通過 'username' 查找
+            const emailIndex = userStore.index('mail');  // 使用你提供的 'mail' 索引
+            console.log("使用 'username' 索引查找用戶...");
+
+            const userRequest = emailIndex.get(email);
+
+            userRequest.onsuccess = function (event) {
+                const userData = event.target.result;
+                if (userData) {
+                    console.log("找到對應用戶:", userData);
+
+                    // 發送重置密碼的郵件
+                    sendEmailForgot(
+                        email,
+                        "noreply@yourwebsite.com",
+                        "重置密碼",
+                        `親愛的用戶，\n請點擊以下鏈接來重置您的密碼：\nhttps://gomtnav.ddsking.com/resetPassword?email=${encodeURIComponent(email)} \n如果您未請求重置密碼，請忽略此郵件。`
+                    );
+                    document.getElementById('message').innerText = "重置密碼的連結已發送到您的電子郵件。";
+                } else {
+                    console.log("找不到該電子郵件對應的用戶");
+                    document.getElementById('message').innerText = "找不到此電子郵件對應的帳戶。";
+                }
+            };
+
+            userRequest.onerror = function () {
+                console.error("查詢用戶資料時發生錯誤");
+                document.getElementById('message').innerText = "查詢時發生錯誤，請稍後再試。";
+            };
+        };
+
+        dbRequest.onerror = function (event) {
+            console.error("無法開啟 IndexedDB 資料庫", event);
+            document.getElementById('message').innerText = "無法連接資料庫，請稍後再試。";
+        };
     });
 });

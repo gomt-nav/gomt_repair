@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             updateUserRequest.onsuccess = function () {
                                 alert("帳號資訊更新成功！");
                                 // 成功後發送驗證信到新的電子郵件地址
-                                // sendVerificationEmail(newEmail);
+                                sendVerificationEmail(newEmail);
 
                                 // 同步資料到 Firebase
                                 syncIndexedDBToFirebase();

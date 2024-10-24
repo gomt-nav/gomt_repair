@@ -32,6 +32,7 @@ function openDatabase() {
             routeRecordsStore.createIndex('elevationLoss', 'elevationLoss', { unique: false });
             routeRecordsStore.createIndex('mtPlace', 'mtPlace', { unique: false });
             routeRecordsStore.createIndex('gpx', 'gpx', { unique: false });
+            routeRecordsStore.createIndex('memo', 'memo', { unique: false });
         }
 
         // 建立使用者資料表

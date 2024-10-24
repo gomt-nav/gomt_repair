@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h2>${route.routeName}</h2>
                         <p>日期: ${route.date}</p>
                         <p>地點: ${route.mtPlace}</p>
+                        <p>備忘錄: ${route.memo}</p>
                         <button class="delete-button" data-id="${route.recordId}">刪除</button>
                         <button class="download-button" data-id="${route.recordId}">下載</button>
                     </div>
