@@ -43,12 +43,18 @@ document.addEventListener("DOMContentLoaded", function() {
             const userStore = transaction.objectStore("users");
 
             // 根據電子郵件查找用戶
-            const emailIndex = userStore.index("email");
+            const emailIndex = userStore.index("mail");
             const emailQuery = emailIndex.get(email);
 
             emailQuery.onsuccess = function() {
                 const userData = emailQuery.result;
                 if (userData) {
+                    // 驗證新密碼是否與原密碼相同
+                    if (userData.password === newPassword) {
+                        messageDiv.innerHTML = '<div class="alert alert-warning">新密碼不可與原密碼相同！</div>';
+                        return;
+                    }
+
                     // 更新用戶密碼
                     userData.password = newPassword;
                     const updateRequest = userStore.put(userData);
@@ -71,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
                             syncIndexedDBToFirebase();
                         });
 
+                        // 密碼重置成功後導向到 profile.html
+                        setTimeout(() => {
+                            window.location.href = "profile.html";
+                        }, 100); // 延遲 2 秒，以便顯示成功訊息
                     };
 
                     updateRequest.onerror = function() {
@@ -94,7 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // 同步用戶資料到 Firebase
 async function syncUserToFirebase(userData) {
-    const userDocRef = doc(firestoreDB, 'users', userData.userId); // 假設 userId 是主鍵
-    await setDoc(userDocRef, userData);
-    console.log('Firebase 中用戶資料已更新');
+    try {
+        const userId = String(userData.userId); // 確保 userId 是字串格式
+        const userDocRef = doc(firestoreDB, 'users', userId);
+        await setDoc(userDocRef, userData);
+        console.log('Firebase 中用戶資料已更新');
+    } catch (error) {
+        console.error('同步至 Firebase 失敗: ', error);
+    }
 }

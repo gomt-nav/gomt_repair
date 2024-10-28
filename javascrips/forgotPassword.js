@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         email,
                         "noreply@yourwebsite.com",
                         "重置密碼",
-                        `親愛的用戶，\n請點擊以下鏈接來重置您的密碼：\nhttps://gomtnav.ddsking.com/resetPassword?email=${encodeURIComponent(email)} \n如果您未請求重置密碼，請忽略此郵件。`
+                        `親愛的用戶，\n請點擊以下鏈接來重置您的密碼：\nhttp://127.0.0.1:5501/resetPassword.html?email=${encodeURIComponent(email)} \n如果您未請求重置密碼，請忽略此郵件。`
                     );
                     document.getElementById('message').innerText = "重置密碼的連結已發送到您的電子郵件。";
                 } else {
