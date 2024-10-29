@@ -49,6 +49,8 @@ function openDatabase() {
             let sessionsStore = db.createObjectStore('sessions', { keyPath: 'sessionId', autoIncrement: true });
             sessionsStore.createIndex('currentUser', 'currentUser', { unique: false });
         }
+
+        
     };
 
     request.onsuccess = function (event) {
