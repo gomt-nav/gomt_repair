@@ -1,18 +1,110 @@
 body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+    background-image: url(../images/gomt-main1-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    color: white;
 }
 
 .logo {
-    max-width: 150px;
+    width: 40%;
 }
 
-.card {
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.siginin{
+
 }
 
-.login-form input {
-    height: 50px;
-    font-size: 16px;
+.signin-input {
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+    width: 60%;
+    padding: 10px 30px; 
+    background-image: linear-gradient(45deg, #aad4c5, #4f90ae, #a8dadc);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease; 
 }
+
+.signin-input::placeholder {
+    color: #cecece; 
+    text-shadow: none;
+}
+
+.signin-input:focus {
+    outline: none; 
+    box-shadow: 0 0 10px 3px rgba(74, 239, 198, 0.8), 
+                0 0 20px 6px rgba(79, 144, 174, 0.6); /* 發光效果 */
+}
+
+.sigin-error {
+    color: white;
+}
+
+.signin-btn-group {
+    margin-right: 80%;
+}
+
+.signin-btn {
+    border-radius: 100px ;
+    border: #71c2a6 solid 3px;
+    background-color: transparent;
+    color: white;
+    width: 28%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.signin-btn:hover {
+    border-radius: 100px ;
+    border: #83e2c0 solid 3px;
+    background-color: #83e2c0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    color: white;
+}
+
+.forgot-pass-txt {
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+@media (min-width: 768px) {
+    .logo{
+        margin-right: 18%;
+    }
+    .siginin{
+        margin-left: 8.3%;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .logo{
+        width: 55%;
+        margin-top: 30%;
+        margin-left: 10%;
+    }
+    .siginin{
+        margin-top: 10%;
+    }
+    .signin-input{
+        margin-left: 10%;
+        width: 85%;
+        height: 85%;
+    }
+    .signin-btn-group{
+        margin-left: 55%;
+    }
+    .signin-btn{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    h1{
+        margin-left: 5%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+}
+
