@@ -1,14 +1,35 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-image: url(../images/gomt-main2-bg-grass.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    color: white;
 }
 
-.container {
+.route-info {
+    background-color: rgba(0, 49, 18, 0.6);
+    backdrop-filter: blur(10px);
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.route-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    width: 1px;
+    height: 30px;
+    background-color: white;
 }
 
 h1 {
@@ -16,11 +37,99 @@ h1 {
     font-weight: bold;
 }
 
-.route-section {
-    margin-top: 30px;
+
+.btn-logout{
+    height: 5%;
+    width: 93%;
+    border-radius: 30px;
+    border: #d60000 solid 2px;
+    background-color: #7c3636;
 }
 
-button {
-    margin-top: 20px;
-    width: 100%;
+/* 右側側邊欄 */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 49, 18, 0.8);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.5);
 }
+
+/* 展開時的寬度設定 */
+.sidebar.active {
+    width: 250px; /* 設置側邊欄展開時的寬度 */
+}
+
+.sidebar a, .sidebar button {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.sidebar a:hover, .sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 開啟側邊欄的按鈕 */
+.open-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent; 
+    color: white;
+    border: white solid 1px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+}
+
+.open-btn:hover {
+    background-color: #36c759;
+}
+
+
+@media (max-width: 575.98px) {
+    .route-info{
+        width: 100%;
+    }
+    h1{
+        font-size: 200%;
+    }
+
+    h3{
+        font-size: 110%;
+    }
+}
+
+

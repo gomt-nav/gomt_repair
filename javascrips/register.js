@@ -1,9 +1,8 @@
-//register.js
 document.addEventListener("DOMContentLoaded", function () {
-    const registerForm = document.getElementById("registerForm");
+    const registerButton = document.getElementById("registerButton");
 
-    registerForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // 防止表單自動提交
+    registerButton.addEventListener("click", function (event) {
+        event.preventDefault(); // 防止表單自動提交（雖然沒有 `<form>`，仍然加上這行保險）
 
         const username = document.getElementById("username").value;
         const email = document.getElementById("email").value;

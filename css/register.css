@@ -76,6 +76,14 @@ body {
         margin-left: 8.3%;
         margin-top: 10%;
     }
+    h1{
+        margin-right: 40%;
+        margin-bottom: 5%;
+    }
+
+    .reg-btn{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
 }
 
 @media (max-width: 575.98px) {

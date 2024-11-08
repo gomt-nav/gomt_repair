@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.querySelector(".login-form");
+    const loginButton = document.querySelector(".signin-btn");
 
-    loginForm.addEventListener("submit", function (event) {
+    loginButton.addEventListener("click", function (event) {
         event.preventDefault(); // 阻止表單自動提交
 
         const usernameOrEmail = document.getElementById("username").value;
