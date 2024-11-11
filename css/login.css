@@ -21,9 +21,6 @@ body {
     border-radius: 100px;
     width: 60%;
     padding: 10px 30px; 
-    background-image: linear-gradient(45deg, #aad4c5, #4f90ae, #a8dadc);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
     color: #ffffff; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     transition: box-shadow 0.3s ease; 

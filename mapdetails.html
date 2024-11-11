@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>路徑詳細資料</title>
-    <link rel="stylesheet" href="./css/map.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;0,600;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mapdetails.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
-    <script type="module" src="./javascrips/mapdetails.js"></script> <!-- 將路徑詳細資料 JS 檔案分離 -->
-
+    <script type="module" src="./javascrips/mapdetails.js"></script>
 </head>
+
 <body>
-    <div id="map" style="height: 400px;"></div>
-    <div class="route-details">
-        <h1 id="routeName">路徑名稱</h1>
-        <p>時長：<span id="duration"></span></p>
-        <p>總長度：<span id="distance"></span></p>
-        <p>總爬升：<span id="elevationGain"></span></p>
-        <p>總下降：<span id="elevationLoss"></span></p>
-        <button id="loadToMap" class="btn btn-primary">加載到地圖</button>
+    <div class="container-fluid vh-100 d-flex flex-column align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center flex-column-reverse flex-md-row">
+            <div class="map-block col-md-8 col-12 order-2 order-md-1">
+                <div class="map" id="map"></div> <!-- 地圖容器 -->
+            </div>
+            <div class="col-md-4 route order-1 order-md-2">
+                <div class="route-details text-md-start ml-md-5 mt-5">
+                    <h1 id="routeName">路徑名稱</h1>
+                    <p>時長：<span id="duration"></span></p>
+                    <p>總長度：<span id="distance"></span></p>
+                    <p>總爬升：<span id="elevationGain"></span></p>
+                    <p>總下降：<span id="elevationLoss"></span></p>
+                    <button id="loadToMap" class="btn btn-primary mt-2">加載到地圖</button>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>

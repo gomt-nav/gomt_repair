@@ -1,21 +1,129 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-image: url(../images/gomt-main1-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    color: white;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.logo {
+    width: 40%;
 }
 
-h2 {
-    color: #007bff;
-    font-weight: bold;
+.contact {
 }
 
-button {
-    margin-top: 10px;
+.contact-input{
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 100px;
+    width: 70%;
+    padding: 10px 30px; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease; 
 }
+
+.contact-input::placeholder{
+    color: #cecece;
+}
+
+.contact-input:focus{
+    outline: none;
+    box-shadow: 0 0 10px 3px rgba(74, 239, 198, 0.8), 0 0 20px 6px rgba(79, 144, 174, 0.6);
+}
+
+.contact-btn-group {
+    text-align: right;
+    width: 100%;
+}
+
+.contact-btn {
+    border-radius: 100px;
+    border: #71c2a6 solid 3px;
+    background-color: transparent;
+    color: white;
+    width: 28%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    margin-right: 30%;
+}
+
+.contact-btn:hover {
+    border: #83e2c0 solid 3px;
+    background-color: #83e2c0;
+    color: white;
+}
+
+.contact-textarea {
+    width: 70%;
+    height: 200px; /* 如果你指的是高度的百分比，請用像素代替 */
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-textarea::placeholder {
+    color: #cecece;
+}
+
+.contact-textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px 3px rgba(74, 239, 198, 0.8), 
+                0 0 20px 6px rgba(79, 144, 174, 0.6);
+}
+
+
+.text-md-start h1 {
+    text-align: left;
+}
+
+
+@media (min-width: 768px) {
+    .logo{
+        margin-right: 18%;
+    }
+    .siginin{
+        margin-left: 8.3%;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .logo{
+        width: 40%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+    .contact{
+        margin-top: 10%;
+    }
+    .contact-input{
+        margin-left: 8%;
+        width: 90%;
+        height: 90%;
+    }
+    .contact-textarea{
+        margin-left:8%;
+        width: 90%;
+        height: 200px; 
+    }
+    .contact-btn-group{
+        margin-left: 50%;
+    }
+    .contact-btn{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    h1{
+        margin-left: 30%;
+        font-size: 200%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+}
+

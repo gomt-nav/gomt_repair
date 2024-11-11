@@ -16,46 +16,31 @@
     <script type="module" src="./javascrips/accountSettings.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.html">個人資料</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="map.html">山林導航</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">聯絡我們</a>
-                </li>
-            </ul>
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center">
+            <div class="remove col-md-5 d-flex flex-column align-items-start">
+                <div class="w-100 text-md-start text-center mb-4">
+                    <h1>帳號修改</h1>
+                </div>
+                <div class=" w-100 d-flex flex-column align-items-center">
+                    <div class="mb-3 w-100 d-flex justify-content-start">
+                        <input type="text" class="rm-input" id="username" name="username" placeholder="姓名" required>
+                    </div>
+                    <div class="mb-3 w-100 d-flex justify-content-start">
+                        <input type="email" class="rm-input" id="email" name="email" placeholder="電子郵件" required>
+                    </div>
+                    <div class="mb-3 w-100 d-flex justify-content-start">
+                        <input type="password" class="rm-input" id="newpassword" name="password" placeholder="密碼" required>
+                    </div>
+                    <div class="mb-3 w-100 d-flex justify-content-start">
+                        <input type="password" class="rm-input" id="confirmPassword" name="password" placeholder="確認密碼" required>
+                    </div>
+                    <div class="signin-btn-group d-flex justify-content-end w-100 mt-3">
+                        <button id="updateButton" class="rm-btn btn-block">更新</button>
+                    </div>                    
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <div class="container mt-5">
-        <h2 class="text-center">帳號設定</h2>
-        <form class="mt-4">
-            <div class="form-group">
-                <label for="name">姓名：</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">電子郵件：</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="newPassword">新密碼：</label>
-                <input type="password" class="form-control" id="newPassword" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">確認密碼：</label>
-                <input type="password" class="form-control" id="confirmPassword" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">更新帳號資訊</button>
-        </form>
     </div>
 </body>
 </html>

@@ -1,21 +1,115 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-image: url(../images/gomt-main2-bg-grass.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    color: white;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+.logo {
+    width: 40%;
 }
 
-h2 {
-    color: #28a745;
-    font-weight: bold;
+.remove{
+
 }
 
-button {
-    margin-top: 20px;
+.rm-input {
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 100px;
+    width: 60%;
+    padding: 10px 30px; 
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease; 
 }
+
+.rm-input::placeholder {
+    color: #cecece; 
+    text-shadow: none;
+}
+
+.rm-input:focus {
+    outline: none; 
+    box-shadow: 0 0 10px 3px rgba(74, 239, 198, 0.8), 
+                0 0 20px 6px rgba(79, 144, 174, 0.6); /* 發光效果 */
+}
+
+.rm-error {
+    color: white;
+}
+
+.rm-btn-group {
+    margin-right: 80%;
+}
+
+.rm-btn {
+    border-radius: 100px ;
+    border: #71c2a6 solid 3px;
+    background-color: transparent;
+    color: white;
+    width: 28%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.rm-btn:hover {
+    border-radius: 100px ;
+    border: #83e2c0 solid 3px;
+    background-color: #83e2c0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    color: white;
+}
+
+
+
+@media (min-width: 768px) {
+    .logo{
+        margin-right: 18%;
+    }
+    .remove{
+        margin-left: 8.3%;
+        margin-top: 10%;
+    }
+    h1{
+        margin-right: 40%;
+        margin-bottom: 5%;
+    }
+
+    .rm-btn{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+}
+
+@media (max-width: 575.98px) {
+    .logo{
+        width: 55%;
+        margin-top: 30%;
+        margin-left: 10%;
+    }
+    .rm{
+        margin-top: 10%;
+    }
+    .rm-input{
+        margin-left: 10%;
+        width: 85%;
+        height: 85%;
+    }
+    .rm-btn-group{
+        margin-left: 55%;
+    }
+    .rm-btn{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    h1{
+        margin-left: 5%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+}
+

@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Go Mountain</title>
-<link rel="stylesheet" href="./css/routeif.css">
-<link rel="manifest" href="/manifest.json">
-<script src="./javascrips/navbar.js"></script>
-<script type="module" src="./db/firebase-config.js"></script>
-<script type="module" src="./db/firebase-sync.js"></script>
-<script type="module" src="./javascrips/routeif.js"></script> <!-- 引入新的 js 檔案 -->
 
-</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路線資料</title>
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./css/routeif.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="./db/firebase-config.js"></script>
+    <script type="module" src="./db/firebase-sync.js"></script>
+    <script type="module" src="./javascrips/routeif.js"></script>
+
+    </body>
 </head>
+
 <body>
-<div class="main-content">
-    <h1 class="page-title">路線資料</h1>
-    <div id="routeContainer"></div> <!-- 顯示儲存的路線資料 -->
-    <div id="routeContainer"></div> <!-- 下載檔案 -->
-</div>
+    <div class="container-fluid vh-100 d-flex flex-column align-items-center justify-content-start text-center">
+        <h1 class="page-title">路線資料</h1> 
+        
+        <div class="row w-100 justify-content-center position-relative mt-4">
+            <div id="routeContainer"></div> 
+            <div id="routeInfoTemplate" class="route-info d-none">
+                <h2 class="route-name"></h2>
+                <p class="route-date">日期: </p>
+                <p class="route-place">地點: </p>
+                <p class="route-memo">備忘錄: </p>
+                <div class="button-container">
+                    <button class="delete-button">刪除</button>
+                    <button class="download-button">下載</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
 
 
 </html>

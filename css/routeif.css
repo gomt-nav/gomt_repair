@@ -1,148 +1,68 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.menu-toggle {
-    display: block;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: #333;
-}
-
-.nav {
-    background-color: #00FF00; /* Green */
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    transition: left 0.3s;
-    padding-top: 60px; /* Added space for toggle */
-}
-
-.nav a {
+body {
+    background-image: url(../images/gomt-main0-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
     color: white;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 16px;
-    display: block; /* Make the links expand the full nav width */
-}
-
-.main-content {
-    margin-left: 20px; /* Ensure content is not hidden behind nav */
-    padding: 20px;
-}
-
-.content-section {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-button {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #f8f8f8;
 }
 
 .page-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 5%;
     text-align: center;
-    color: black;
-    margin-top: 20px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    z-index: 1000;
 }
 
-.hamburger-menu {
+.route-info {
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin: 10px 0;
+    color: white;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    align-items: flex-start; /* 保持文字置左 */
+    margin-left: 37%;
 }
 
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-.nav-panel {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: 0.4s;
+.button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.nav-panel.active {
-    left: 0;
-}
-
-.nav-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.nav-list li {
-    margin: 20px 0;
-}
-
-.nav-list a {
+button.delete-button,
+button.download-button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .nav-list li {
-        margin: 15px 0;
-    }
-
-    .nav-list a {
-        font-size: 20px;
-    }
+button.delete-button:hover,
+button.download-button:hover {
+    background-color: #ffffff;
+    color: #333;
 }
 
+@media (max-width: 575.98px) {
+    .page-title{
+        margin-top: 15%;
+        margin-left: 6%;
+        font-size: 200%;
+    }
+    .route-info{
+        margin-left: 5%;
+        width: 90%;
+    }
+}

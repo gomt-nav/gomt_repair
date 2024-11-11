@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/gomt-main0-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    color: white;
+}
+
+.map-block {
+    margin-bottom: 5%;
+}
+
+.map {
+    width: 100%; /* 確保地圖在小螢幕上佔滿寬度 */
+    height: 250px; /* 設置固定的高度來顯示地圖 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* 設置陰影 */
+    border-radius: 20px; /* 圓角效果 */
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+@media (min-width: 576px) {
+    .map {
+        height: 400px; /* 中等和大螢幕上使用更高的地圖高度 */
+    }
+}
