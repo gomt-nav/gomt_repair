@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^4.4.1"
-  }
+    "@emailjs/browser": "^4.4.1",
+    "express": "^4.21.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "gomt_repair",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomt-nav/gomt_repair.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gomt-nav/gomt_repair/issues"
+  },
+  "homepage": "https://github.com/gomt-nav/gomt_repair#readme",
+  "description": ""
 }
